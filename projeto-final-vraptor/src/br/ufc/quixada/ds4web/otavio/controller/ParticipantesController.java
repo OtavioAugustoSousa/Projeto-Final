@@ -26,26 +26,7 @@ public class ParticipantesController {
 	}
 	
 	@Post("/participantes")
-	public void adiciona(final Participante participante){
-	/*	validator.checking(new Validations(){{
-			//Validar Nome
-			that(participante.getNome() != null && participante.getNome().length()>=3,"participante.nome","nome.obrigatorio");
-			
-			//Validar Email
-			Pattern p = Pattern.compile("^[\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+[a-zA-Z]{2,7}$"); 
-		    Matcher m = p.matcher(participante.getEmail()); 
-			that(m.find(),"participante.email","email.obrigatorio");
-			
-			//senha
-			that(participante.getSenha() != null,"participante.senha","senha.obrigatorio");
-		
-		
-		
-		}});*/
-		
-		
-		
-		
+	public void adiciona(final Participante participante){	
 		dao.salvar(participante);
 		result.redirectTo(ParticipantesController.class).lista();
 	}
