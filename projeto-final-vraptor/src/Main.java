@@ -14,6 +14,11 @@ public class Main {
 	public static void main(String[] args) {
 		
 		
+		
+		
+		
+		
+	/*	
 		Participante p= new Participante();
 		p.setNome("Otávio");
 		p.setEmail("otavioaugusto@alu.ufc.br");
@@ -33,7 +38,7 @@ public class Main {
 		System.out.println(new CriadorDeSessaoFabrica().getInstance().openSession());
 		GrupoDao grupoDao = new GrupoDao(new CriadorDeSessaoFabrica().getInstance().openSession());
 		grupoDao.salvar(grupo);
-		
+		*/
 		
 /*		ParticipanteDAO pDao= new ParticipanteDAO();
 		pDao.salvar(p);*/

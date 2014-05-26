@@ -1,11 +1,12 @@
 package br.ufc.quixada.ds4web.otavio.dao;
 
 import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
 import br.com.caelum.vraptor.ioc.Component;
 import br.ufc.quixada.ds4web.otavio.modelo.Grupo;
-import br.ufc.quixada.ds4web.otavio.modelo.Participante;
 
 @Component
 public class GrupoDao {
@@ -23,10 +24,10 @@ public class GrupoDao {
 		tx.commit();
 		
 	}
-	public void remover(Participante participante) {
+	public void remover(Grupo grupo) {
 		
 		Transaction tx = session.beginTransaction();
-		session.delete(participante);
+		session.delete(grupo);
 		tx.commit();
 	}
 	
