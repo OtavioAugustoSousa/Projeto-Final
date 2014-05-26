@@ -1,18 +1,19 @@
 package br.ufc.quixada.ds4web.otavio.dao;
 
 import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
 import br.com.caelum.vraptor.ioc.Component;
 import br.ufc.quixada.ds4web.otavio.modelo.Grupo;
 import br.ufc.quixada.ds4web.otavio.modelo.Participante;
 
 @Component
 public class GrupoDao {
+	
 	private Session session;
+	
 	public GrupoDao(Session session) {
+		
 		 this.session=session;
 	}
 	public void salvar(Grupo grupo) {

@@ -26,9 +26,7 @@ public class SessaoFabrica implements ComponentFactory<Session>{
 	}
 	
 	public Session getInstance() {
-		
 		return sessao;
-		
 	}
 	
 	@PreDestroy

@@ -13,8 +13,16 @@
 			<legend>Adicionar Grupo</legend>
 			<label for="nome">Nome:</label> <input id="nome" type="text"
 				name="grupo.nome" /> <label for="descricao">Descrição:</label> <input
-				id="descricao" type="text" name="grupo.email" /> 
+				id="descricao" type="text" name="grupo.descricao" />
+
+			
+			<div id="participantes">
+			
+				<label>Participantes:</label>
+			</div>
 			<button type="submit">Enviar</button>
+
+
 
 		</fieldset>
 

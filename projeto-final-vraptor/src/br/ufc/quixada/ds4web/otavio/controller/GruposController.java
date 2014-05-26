@@ -14,6 +14,7 @@ import br.ufc.quixada.ds4web.otavio.modelo.Grupo;
 public class GruposController {
 	private GrupoDao dao;
 	private Result result;
+	
 	public GruposController(GrupoDao dao, Result result) {
 		this.dao=dao;
 		this.result=result;
@@ -22,8 +23,9 @@ public class GruposController {
 	@Post("/grupos")
 	public void adiciona(Grupo grupo){	
 		dao.salvar(grupo);
-		result.redirectTo(ParticipantesController.class).lista();
+		result.redirectTo(this).lista();
 	}
+	
 	@Get("grupos")
 	public List<Grupo> lista() {
 		return dao.listaTudo();
@@ -32,16 +34,15 @@ public class GruposController {
 	@Get("/grupo/{id}")
 	public Grupo edita(Long id){
 		return dao.carregar(id);
-	} 
+	}
+	
 	@Get("/grupo/novo")
 	public void formulario() {
 	}
-	
-	
+
 	@Put("/grupo/{grupo.id}")
 	public void altera(Grupo grupo) {
 		dao.atuaizar(grupo);
 		result.redirectTo(this).lista();
 	}
-	
 }
