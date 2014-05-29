@@ -1,1 +1,50 @@
-we should not see this.
+<html>
+	<head>
+		<title>Introdução a Jquery UI</title>
+		<link href="jquery/css/south-street/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+		<script src="jquery/js/jquery-1.10.2.js"></script>
+		<script src="jquery/js/jquery-ui-1.10.4.custom.js"></script>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$("#modal").draggable({
+					cursor : "move",
+					cursorAt : {
+						top : 15,
+						left : 15
+					}
+				});
+
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+
+		<div id="modal" class="jumbotron">
+			<div class="container">
+				Hello World!
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h2 class="panel-title">Sua compra</h2>
+			</div>
+			<div class="panel-body">
+				<form action="" method="GET">
+
+					<label for="nome">Nome:</label>
+					<input type="text" name="nome" id="nome">
+					<label for="senha">Senha:</label>
+					<input type="password" name="senha" id="senha">
+
+					<input type="submit">
+				</form>
+
+			</div>
+		</div>
+	</body>
+</html>

@@ -33,6 +33,7 @@ public class GruposController {
 	
 	@Get("/grupo/{id}")
 	public Grupo edita(Long id){
+		System.out.println("chega");
 		return dao.carregar(id);
 	}
 	
@@ -42,6 +43,7 @@ public class GruposController {
 
 	@Put("/grupo/{grupo.id}")
 	public void altera(Grupo grupo) {
+		
 		dao.atuaizar(grupo);
 		result.redirectTo(this).lista();
 	}

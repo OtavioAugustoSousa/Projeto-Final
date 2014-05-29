@@ -6,20 +6,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+
+<link href="<c:url value="/bootstrap/css/bootstrap.css"/>"rel="stylesheet" type="text/css" />
+<script src="<c:url value="/jquery/js/jquery-1.10.2.js"/>"></script>
+<script src="<c:url value="/jquery/js/jquery-ui-1.10.4.custom.js"/>"></script>
+
+
 </head>
 <body>
-	<form action="<c:url value="/participantes"/>" method="post">
-		<fieldset>
-			<legend>Adicionar Paticipantes</legend>
-			<label for="nome">Nome:</label> <input id="nome" type="text"
-				name="participante.nome" /> <label for="email">Email:</label> <input
-				id="email" type="text" name="participante.email" /> <label
-				for="senha">Senha:</label> <input id="senha" type="password"
-				name="participante.senha" />
-			<button type="submit">Enviar</button>
+	<div class="panel-body">
+		<form action="<c:url value="/participantes"/>" method="post">
+			<fieldset>
+				<legend>Adicionar Paticipantes</legend>
+				<label for="nome">Nome:</label> <input id="nome" type="text"
+					name="participante.nome" /> <label for="email">Email:</label> <input
+					id="email" type="text" name="participante.email" /> <label
+					for="senha">Senha:</label> <input id="senha" type="password"
+					name="participante.senha" />
+				<button type="submit">Enviar</button>
 
-		</fieldset>
+			</fieldset>
 
-	</form>
+		</form>
+	</div>
 </body>
 </html>

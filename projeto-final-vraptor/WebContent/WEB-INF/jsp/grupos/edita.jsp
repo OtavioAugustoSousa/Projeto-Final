@@ -5,18 +5,22 @@
 
 <html>
 <head>
+<%@include file="/cabecalho.jsp" %>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="<c:url value="/grupos/${grupo.id}"/>"
+	<form action="<c:url value="/grupo/${grupo.id}"/>"
 		method="POST">
 		<fieldset>
 			<legend>Editar Grupo</legend>
 			<label for="nome">Nome:</label> <input id="nome" type="text"
-				name="grupo.nome" value="${participante.nome }" />
+				name="grupo.nome" value="${grupo.nome}" />
+				
 			<button type="submit" name="_method" value="PUT">Enviar</button>
-		</fieldset>
+			
+		</fieldset> 
+		
 	</form>
 </body>
 </html>
