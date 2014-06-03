@@ -32,6 +32,7 @@ public class ParticipantesController {
 	}
 	@Get("participantes")
 	public List<Participante> lista() {
+		
 		return dao.listaTudo();
 	}
 	
